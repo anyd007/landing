@@ -161,4 +161,58 @@ canvas {
     bottom: 0; }
 
 /*call to action*/
+figure{
+    position: absolute;
+    top: 65%;
+    left:34vw;
+    z-index: 5;
+    width:30vw;
+    height:6vh;
+    cursor:pointer;
+    perspective:500px;
+}
+figure div{
+    height:100%;
+    transform-style:preserve-3d;
+    transition:0.25s;
+}
+figure:hover div{
+    transform:rotateY(180deg);
+    unicode-bidi:bidi-override;
+    direction:rtl;
+}
+span{
+    /*text-decoration: none;*/
+    width:100%;
+    height:auto;
+    position:absolute;
+    box-sizing:border-box;
+    /*border:0.3vw solid #666666;*/
+    font-family: 'Audiowide', sans-serif;
+    line-height:7vh;
+    font-size:2vw;
+    text-align:center;
+    text-transform:uppercase;
 
+}
+span:nth-child(1){
+    background-color:#666666;
+    color: white;
+    font-weight: bold;
+    transform: translate3d(0, 0, 25px);
+}
+span:nth-child(2){
+
+    color:white;
+    background-color: #666666;
+    font-weight: bold;
+    transform: rotateY(180deg) translate3d(0, 0, 25px);
+
+}
+
+span:hover {
+    background-color: #be29ec ;
+    /*border:0.3vw solid #be29ec;*/
+    color: #666666;
+}
+/*call to action end*/
