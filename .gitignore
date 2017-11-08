@@ -23,7 +23,7 @@ Makefile.in
 /install-sh
 /missing
 /stamp-h1
-
+node_modules/
 # https://www.gnu.org/software/libtool/
 
 /ltmain.sh
@@ -31,3 +31,14 @@ Makefile.in
 # http://www.gnu.org/software/texinfo
 
 /texinfo.tex
+.idea/inspectionProfiles/
+.sass-cache/a4347e9fceaea22083fc8f76b22c4c1586d8332b/ie.sassc
+.sass-cache/a4347e9fceaea22083fc8f76b22c4c1586d8332b/stylenew.scssc
+sass/ie.css
+sass/ie.css.map
+sass/ie.sass
+sass/print.css
+sass/print.css.map
+sass/print.sass
+sass/screen.css
+sass/screen.sass
