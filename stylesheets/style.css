@@ -1,5 +1,8 @@
-body {
+html, body {
     background: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 /*hamburger*/
 
@@ -25,7 +28,7 @@ a, a:visited {
     /*margin-top: 3%;*/
     display: block;
     /*word-spacing: -5px;*/
-    font: 25px 'Audiowide', sans-serif;
+    font: 30px 'Rafale BG.otf', sans-serif;
     /*padding: 5px 20px;*/
     text-transform: uppercase;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
@@ -66,15 +69,25 @@ a, a:visited {
 }
 
 /*nav section end*/
+#first {
+    margin-top: 10%;
+}
+#secend {
+    margin-top: 200%;
+    padding-bottom: 5%;
+}
+#third {
+    padding-bottom: 5%;
+}
 .main{
-    margin-top: 30%;
+    /*margin-top: 20%;*/
     text-align: center;
-    font-family: 'Audiowide', sans-serif;
-    font-size:7em;
+    font-family: 'Rafale BG.otf', sans-serif;
+    font-size:9em;
     /*position:absolute; top:0; bottom:0; left:0; right:0;*/
     /*margin:auto; height:240px; width:70%;*/
     color:#666666;
-    font-weight:300;
+    text-transform: uppercase;
 
     -webkit-animation: floating-text 2s ease alternate infinite;
     -moz-animation: floating-text 2s ease alternate infinite;
@@ -154,16 +167,18 @@ a, a:visited {
 canvas {
     position: absolute;
     width: 100%;
-    height: 100%;
+    /*height: 100%;*/
     top: 0;
     right: 0;
     left: 0;
-    bottom: 0; }
+    bottom: 0;
+}
+
 
 /*call to action*/
 figure{
     position: absolute;
-    top: 65%;
+    top: 67%;
     left:34vw;
     z-index: 5;
     width:30vw;
@@ -188,7 +203,7 @@ span{
     position:absolute;
     box-sizing:border-box;
     /*border:0.3vw solid #666666;*/
-    font-family: 'Audiowide', sans-serif;
+    font-family: 'Rafale BG.otf', sans-serif;
     line-height:7vh;
     font-size:2vw;
     text-align:center;
@@ -216,3 +231,18 @@ span:hover {
     color: #666666;
 }
 /*call to action end*/
+
+.skills {
+    text-align: center;
+}
+#top {
+bottom : 200px;
+right : 20px;
+position : fixed;
+cursor : pointer;
+z-index : 1;
+display : none;
+background-color : #666666;
+padding :20px 40px;
+color : #ffffff;
+}

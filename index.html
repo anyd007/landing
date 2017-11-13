@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="stylesheets/style.css" rel="stylesheet" type="text/css">
-    <script src="javascript/script.js" type="text/javascript"></script>
-    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
-    <!--[if IE]>
-    <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    <![endif]-->
+    <link href="stylesheets/font.css" rel="stylesheet" type="text/css">
+    <!--<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />-->
+    <!--<link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />-->
+    <!--&lt;!&ndash;[if IE]>-->
+    <!--<link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />-->
+    <!--<![endif]&ndash;&gt;-->
+    <link rel="icon" href="images/favicon.ico">
 
     <title>Landing Page</title>
 
@@ -25,7 +26,9 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body data-spy="scroll" data-target="spyNav">
+<body>
+<canvas id="back"></canvas>
+<div class="full">
 <div id="spyNav" class="navigation">
 <nav id="nav_bar" class="navbar navbar-inverse navbar-static-top navbar-fixed-top" role="navigation">
     <div class="container">
@@ -39,36 +42,68 @@
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <header class="collapse navbar-collapse large" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a id="aboutMe"  target="_blank" href="https://www.linkedin.com/in/andrzej-gebala/">to ja</a></li>
-                <li><a id="imGoodAt" href="#"> moje sprawności </a></li>
-                <li><a id="projects" href="#">Portfolio</a></li>
+                <li><a target="_blank" href="https://www.linkedin.com/in/andrzej-gebala/">to ja</a></li>
+                <li><a href="#secend"> moje sprawności </a></li>
+                <li><a href="#first">Portfolio</a></li>
                 <!--<li><a href="#">Blog</a></li>-->
-                <li><a id="contact" href="#">poznajmy się</a></li>
+                <li><a href="#">poznajmy się</a></li>
+
             </ul>
-        </div>
+        </header>
     </div>
 </nav>
-    <canvas class='connecting-dots'></canvas>
     <div class="container">
-        <div class="row">
+
+        <section class="row" id="first">
             <div class="col-md-10 col-md-offset-1">
     <h1 class="main">Andrzej Gębala</h1>
             </div>
-        </div>
+        </section>
+        <div class="row">
         <figure>
             <div>
                 <span>Sprawdź moje CV</span>
                 <span class="features"><a href="images/cv1.pdf" target="_blank" style="text-decoration: none">Kliknij</a></span>
             </div>
         </figure>
+        </div>
+    </div>
+
+    <section class="row" id="secend">
+        <div class="container">
+        <div class="skills">
+        <div class="col-md-3">js</div>
+        <div class="col-md-3">css3</div>
+        <div class="col-md-3">reactjs</div>
+        <div class="col-md-3">redux</div>
+        </div>
+        </div>
+    </section>
+        <section class="row" id="third">
+            <div class="container">
+            <div class="skills">
+                <div class="col-md-3">js</div>
+                <div class="col-md-3">css3</div>
+                <div class="col-md-3">reactjs</div>
+                <div class="col-md-3">redux</div>
+            </div>
+            </div>
+        </section>
     </div>
 </div>
+
+
+
+
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="jquery-3.2.1.js"></script>
+<script src="javascript/script.js" type="text/javascript"></script>
+<script src="javascript/jq.js" type="text/javascript"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/jquery-3.2.1.js"></script>
+
 <script src="js/bootstrap.min.js"></script>
 
 </body>
