@@ -19,7 +19,7 @@ var canvasDots = function() {
     var dots = {
         nb: 600,
         distance: 60,
-        d_radius: 100,
+        d_radius: 130,
         array: []
     };
 
@@ -107,4 +107,3 @@ window.onload = function() {
 };
 // end of animated background
 
-// call to action
