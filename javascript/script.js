@@ -1,109 +1,105 @@
+
 // animated background
-var canvasDots = function() {
-    var canvas = document.querySelector('canvas'),
-        ctx = canvas.getContext('2d'),
-        colorDot = '#666666',
-        color = '#be29ec';
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    canvas.style.display = 'block';
-    ctx.fillStyle = colorDot;
-    ctx.lineWidth = .1;
-    ctx.strokeStyle = color;
+var livePatern = {
+    canvas: null,
+    context: null,
+    cols: 0,
+    rows: 0,
+    colors: [252, 251, 249, 248, 241, 240],
+    triangleColors: [],
+    destColors: [],
 
-    var mousePosition = {
-        x: 30 * canvas.width / 100,
-        y: 30 * canvas.height / 100
-    };
+    init: function(){
+        this.canvas = document.getElementById('canvas');
+        this.context = this.canvas.getContext('2d');
+        this.cols = Math.floor(document.body.clientWidth / 24);
+        this.rows = Math.floor(document.body.clientHeight / 24) + 1;
 
-    var dots = {
-        nb: 600,
-        distance: 60,
-        d_radius: 130,
-        array: []
-    };
+        this.canvas.width = document.body.clientWidth;
+        this.canvas.height = document.body.clientHeight;
 
-    function Dot(){
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
+        this.drawBackground();
+        this.animate();
+    },
 
-        this.vx = -.5 + Math.random();
-        this.vy = -.5 + Math.random();
+    drawTriangle: function(x, y, color, inverted){
+        inverted = inverted == undefined ? false : inverted;
 
-        this.radius = Math.random();
-    }
+        this.context.beginPath();
+        this.context.moveTo(x, y);
+        this.context.lineTo(inverted ? x - 22 : x + 22, y + 11);
+        this.context.lineTo(x, y + 22);
+        this.context.fillStyle = "rgb("+color+","+color+","+color+")";
+        this.context.fill();
+        this.context.closePath();
+    },
 
-    Dot.prototype = {
-        create: function(){
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-            ctx.fill();
-        },
+    getColor: function(){
+        return this.colors[(Math.floor(Math.random() * 6))];
+    },
 
-        animate: function(){
-            for(i = 0; i < dots.nb; i++){
+    drawBackground: function(){
+        var eq = null;
+        var x = this.cols;
+        var destY = 0;
+        var color, y;
 
-                var dot = dots.array[i];
+        while(x--){
+            eq = x % 2;
+            y = this.rows;
 
-                if(dot.y < 0 || dot.y > canvas.height){
-                    dot.vx = dot.vx;
-                    dot.vy = - dot.vy;
-                }
-                else if(dot.x < 0 || dot.x > canvas.width){
-                    dot.vx = - dot.vx;
-                    dot.vy = dot.vy;
-                }
-                dot.x += dot.vx;
-                dot.y += dot.vy;
-            }
-        },
+            while(y--){
+                destY = Math.round((y-0.5) * 24);
 
-        line: function(){
-            for(i = 0; i < dots.nb; i++){
-                for(j = 0; j < dots.nb; j++){
-                    i_dot = dots.array[i];
-                    j_dot = dots.array[j];
-
-                    if((i_dot.x - j_dot.x) < dots.distance && (i_dot.y - j_dot.y) < dots.distance && (i_dot.x - j_dot.x) > - dots.distance && (i_dot.y - j_dot.y) > - dots.distance){
-                        if((i_dot.x - mousePosition.x) < dots.d_radius && (i_dot.y - mousePosition.y) < dots.d_radius && (i_dot.x - mousePosition.x) > - dots.d_radius && (i_dot.y - mousePosition.y) > - dots.d_radius){
-                            ctx.beginPath();
-                            ctx.moveTo(i_dot.x, i_dot.y);
-                            ctx.lineTo(j_dot.x, j_dot.y);
-                            ctx.stroke();
-                            ctx.closePath();
-                        }
-                    }
-                }
+                this.drawTriangle(x * 24 + 2, eq == 1 ? destY : y * 24, this.getColor());
+                this.drawTriangle(x * 24, eq == 1 ? destY  : y * 24, this.getColor(), true);
             }
         }
-    };
+    },
 
-    function createDots(){
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        for(i = 0; i < dots.nb; i++){
-            dots.array.push(new Dot());
-            dot = dots.array[i];
+    animate: function(){
+        var me = this;
 
-            dot.create();
+        var x = Math.floor(Math.random() * this.cols);
+        var y = Math.floor(Math.random() * this.rows);
+        var eq = x % 2;
+
+        if (eq == 1) {
+            me.drawTriangle(x * 24, Math.round((y-0.5) * 24) , this.getColor(), true);
+        } else {
+            me.drawTriangle(x * 24 + 2, y * 24, this.getColor());
         }
 
-        dot.line();
-        dot.animate();
-    }
+        setTimeout(function(){
+            me.animate.call(me);
+        }, 10);
+    },
 
-    window.onmousemove = function(parameter) {
-        mousePosition.x = parameter.pageX;
-        mousePosition.y = parameter.pageY;
-    }
-
-    mousePosition.x = window.innerWidth / 2;
-    mousePosition.y = window.innerHeight / 2;
-
-    setInterval(createDots, 1000/30);
 };
 
-window.onload = function() {
-    canvasDots();
-};
+!function(){livePatern.init();}()
+
 // end of animated background
+
+// CV button
+
+var moveForce = 30; // max popup movement in pixels
+var rotateForce = 20; // max popup rotation in deg
+
+$(document).mousemove(function(e) {
+    var docX = window.innerWidth;
+    var docY = window.innerHeight;
+
+    var moveX = (e.pageX - docX/2) / (docX/2) * -moveForce;
+    var moveY = (e.pageY - docY/2) / (docY/2) * -moveForce;
+
+    var rotateY = (e.pageX / docX * rotateForce*2) - rotateForce;
+    var rotateX = -((e.pageY / docY * rotateForce*2) - rotateForce);
+
+    $('.popup')
+        .css('left', moveX+'px')
+        .css('top', moveY+'px')
+        .css('transform', 'rotateX('+rotateX+'deg) rotateY('+rotateY+'deg)');
+});
+// CV button end
 

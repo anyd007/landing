@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="stylesheets/style.css" rel="stylesheet" type="text/css">
     <link href="stylesheets/font.css" rel="stylesheet" type="text/css">
+    <link href="stylesheets/morestyle.css" rel="stylesheet" type="text/css">
     <!--<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />-->
     <!--<link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />-->
     <!--&lt;!&ndash;[if IE]>-->
@@ -27,8 +28,7 @@
     <![endif]-->
 </head>
 <body>
-<canvas id="back"></canvas>
-<div class="full">
+<canvas id="canvas"></canvas>
 <div id="spyNav" class="navigation">
 <nav id="nav_bar" class="navbar navbar-inverse navbar-static-top navbar-fixed-top" role="navigation">
     <div class="container">
@@ -55,42 +55,64 @@
     </div>
 </nav>
     <div class="container">
-
         <section class="row" id="first">
-            <div class="col-md-10 col-md-offset-1">
+            <!--<div class="col-xs-10 col-xs-offset-1">-->
     <h1 class="main">Andrzej Gębala</h1>
-            </div>
+            <!--</div>-->
         </section>
-        <div class="row">
-        <figure>
-            <div>
-                <span>Sprawdź moje CV</span>
-                <span class="features"><a href="images/cv1.pdf" target="_blank" style="text-decoration: none">Kliknij</a></span>
+    </div>
+
+    <div class="row">
+        <div class="moving-zone">
+            <div class="popup">
+                <div class="popup-content">
+                    <div class="popup-text">
+                        Chcesz zobaczyć moje <b>CV</b>?<br/>
+                        <b><a href="images/cv1.pdf" target="_blank" style="text-decoration: none">KLIKNIJ</a></b>
+                    </div>
+                </div>
             </div>
-        </figure>
         </div>
     </div>
 
+
+        <!--<figure>-->
+            <!--<div>-->
+                <!--<span>Sprawdź moje CV</span>-->
+                <!--<span class="features"><a href="images/cv1.pdf" target="_blank" style="text-decoration: none">Kliknij</a></span>-->
+            <!--</div>-->
+        <!--</figure>-->
+
+    <div class="container-fluid">
     <section class="row" id="secend">
-        <div class="container">
-        <div class="skills">
-        <div class="col-md-3">js</div>
-        <div class="col-md-3">css3</div>
-        <div class="col-md-3">reactjs</div>
-        <div class="col-md-3">redux</div>
-        </div>
+        <div class="col-xs-12">
+            <!--<div class="sp-container">-->
+                <!--<div class="sp-content">-->
+                    <!--<div class="sp-globe"></div>-->
+                    <h2 class="frame-1"></h2>
+                    <h2 class="frame-2"></h2>
+                    <h2 class="frame-3"></h2>
+                    <h2 class="frame-4"></h2>
+                    <h2 class="frame-5"><span class="skills">HTML5/CSS3</span>
+                        <span class="skills">JavaScript</span>
+                        <span class="skills">React JS</span></h2>
+                     	<!--<a class="sp-circle-link" href="#">Join us!</a>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
         </div>
     </section>
+    </div>
+    <div class="container">
         <section class="row" id="third">
-            <div class="container">
             <div class="skills">
                 <div class="col-md-3">js</div>
                 <div class="col-md-3">css3</div>
                 <div class="col-md-3">reactjs</div>
                 <div class="col-md-3">redux</div>
             </div>
-            </div>
         </section>
+    </div>
     </div>
 </div>
 
@@ -100,8 +122,11 @@
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="jquery-3.2.1.js"></script>
+<script src="javascript/lib/jquery.waypoints.min.js"></script>
+<!--<script src="javascript/lib/noframework.waypoints.js"></script>-->
 <script src="javascript/script.js" type="text/javascript"></script>
 <script src="javascript/jq.js" type="text/javascript"></script>
+<script src="javascript/scroll.js" type="text/javascript"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 
 <script src="js/bootstrap.min.js"></script>
