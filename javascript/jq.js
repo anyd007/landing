@@ -52,9 +52,85 @@ $(document).ready(function(){
             // position you want to scroll to
             scrollTop: 0
         }, 700);
+        return false;
 
         // stop anchor link behavior
-        return false;
+
     });
-    // end back to the top
 });
+    // end back to the top
+
+// resize element
+function resize() {
+    var n = $("body").width() / 17 + "pt";
+    $("h1").css('fontSize', n);
+}
+$(window).on("resize", resize);
+$(document).ready(resize);
+
+// letter drop
+(function($) {
+
+    $.fn.letterDrop = function() {
+        // Chainability
+        return this.each( function() {
+
+            var obj = $( this );
+
+            var drop = {
+                arr : obj.text().split( '' ),
+
+                range : {
+                    min : 1,
+                    max : 9
+                },
+
+                styles : function() {
+                    var dropDelays = '\n', addCSS;
+
+                    for ( i = this.range.min; i <= this.range.max; i++ ) {
+                        dropDelays += '.ld' + i + ' { animation-delay: 1.' + i + 's; }\n';
+                    }
+
+                    addCSS = $( '<style>' + dropDelays + '</style>' );
+                    $( 'head' ).append( addCSS );
+                },
+
+                main : function() {
+                    var dp = 0;
+                    obj.text( '' );
+
+                    $.each( this.arr, function( index, value ) {
+
+                        dp = dp.randomInt( drop.range.min, drop.range.max );
+
+                        if ( value === ' ' )
+                            value = '&nbsp \n';
+
+                        obj.append( '<span class="letterDrop ld' + dp + '">' + value + '</span>' );
+                    });
+
+                }
+            };
+
+            Number.prototype.randomInt = function ( min, max ) {
+                return Math.floor( Math.random() * ( max - min + 1 ) + min );
+            };
+
+
+            // Create styles
+            drop.styles();
+
+
+            // Initialise
+            drop.main();
+        });
+
+    };
+
+}(jQuery));
+
+
+// USAGE
+$( '.main' ).letterDrop();
+
