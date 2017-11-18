@@ -1,0 +1,59 @@
+a, a:visited {
+    outline: medium none;
+    text-decoration: none;
+    transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -webkit-transition: all 0.4s ease 0s;
+}
+
+.nav {
+    width: 100%;
+    text-align: center;
+}
+.nav li {
+    display: inline-block;
+    overflow: hidden;
+}
+.navbar-nav li a {
+    /*margin-top: 3%;*/
+    display: block;
+    /*word-spacing: -5px;*/
+    font: 30px 'Rafale BG.otf', sans-serif;
+    /*padding: 5px 20px;*/
+    text-transform: uppercase;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    color: #666666;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+#bs-example-navbar-collapse-1:hover li a{
+    color: transparent;
+    text-shadow: 0px 0px 10px black; /* Other links blur color */
+    -webkit-transform: skew(0deg);
+    -moz-transform: skew(0deg);
+    -o-transform: skew(0deg);
+    -ms-transform: skew(0deg);
+    transform: skew(0deg);
+
+}
+#bs-example-navbar-collapse-1 li a:hover{
+    text-outline: 1px black;
+    background: transparent;
+    color: white;
+    transform: scale(1.1);
+}
+#bs-example-navbar-collapse-1 li a:hover, #bs-example-navbar-collapse-1 li a:active {
+    color: #be29ec;
+    text-decoration: none;
+}
+#nav_bar {
+    opacity: 0.8;
+    background-color: #666666;
+    border-color: #666666;
+}
+#bs-example-navbar-collapse-1 {
+    margin-left: 120px;
+}
