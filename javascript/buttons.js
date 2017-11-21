@@ -1,5 +1,5 @@
 // CV button
-
+$('.popup').hide().delay(6600).fadeIn(1500);
 var moveForce = 30; // max popup movement in pixels
 var rotateForce = 20; // max popup rotation in deg
 

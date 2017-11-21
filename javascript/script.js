@@ -82,4 +82,3 @@ var livePatern = {
 // end of animated background
 
 
-
