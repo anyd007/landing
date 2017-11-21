@@ -19,7 +19,7 @@
                     var dropDelays = '\n', addCSS;
 
                     for ( i = this.range.min; i <= this.range.max; i++ ) {
-                        dropDelays += '.ld' + i + ' { animation-delay: 1.' + i + 's; }\n';
+                        dropDelays += '.ld' + i + ' { animation-delay: 0.4' + i + 's; }\n';
                     }
 
                     addCSS = $( '<style>' + dropDelays + '</style>' );
@@ -63,4 +63,13 @@
 
 // USAGE
 $( '.main' ).letterDrop();
+$(".main2").delay(2000).queue(function(next) {
+    $(this).addClass("main2show").letterDrop();
+    next();
+});
+$(".main3").delay(4000).queue(function(next) {
+    $(this).addClass("main3show").letterDrop();
+    next();
+});
+
 // end of letter drop

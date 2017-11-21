@@ -4,7 +4,7 @@
     display: inline-block;
     opacity: 0.8;
     transform: rotateX(-90deg);
-    animation: letterDrop 1s ease 1 normal forwards;
+    animation: letterDrop 1.3s ease 1 normal forwards;
 }
 
 @keyframes letterDrop {
@@ -31,10 +31,33 @@ span:nth-child(2n) {
     /*margin-top: 20%;*/
     text-align: center;
     font-family: 'Rafale BG.otf', sans-serif;
-    font-size: 8vw;
+    font-size: 5vw;
     /*position:absolute; top:0; bottom:0; left:0; right:0;*/
     /*margin:auto; height:240px; width:70%;*/
     color: #666666;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
 }
 /*letter drop end*/
+.main2 {
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    font-family: 'Rafale BG.otf', sans-serif;
+    font-size: 5vw;
+    color: #666666;
+}
+.main2show {
+    visibility: visible;
+    opacity: 1;
+}
+.main3 {
+    visibility: hidden;
+    text-align: center;
+    font-family: 'Rafale BG.otf', sans-serif;
+    font-size: 5vw;
+    color: #666666;
+}
+.main3show {
+    visibility: visible;
+    opacity: 1;
+}
