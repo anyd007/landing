@@ -17,9 +17,9 @@ html, body {
     margin-top: 21%;
     /*padding-bottom: 10%;*/
 }
-/*#third {*/
-    /*padding-bottom: 50%;*/
-/*}*/
+#third {
+    padding-bottom: 10%;
+}
 
 
 canvas {

@@ -63,11 +63,11 @@
 
 // USAGE
 $( '.main' ).letterDrop();
-$(".main2").delay(2000).queue(function(next) {
+$(".main2").delay(1200).queue(function(next) {
     $(this).addClass("main2show").letterDrop();
     next();
 });
-$(".main3").delay(4000).queue(function(next) {
+$(".main3").delay(2400).queue(function(next) {
     $(this).addClass("main3show").letterDrop();
     next();
 });
