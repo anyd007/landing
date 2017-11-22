@@ -5,9 +5,11 @@
     <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet" type="text/css">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="stylesheets/loading.css" rel="stylesheet" type="text/css">
     <link href="stylesheets/sectionfirst.css" rel="stylesheet" type="text/css">
     <link href="stylesheets/nav.css" rel="stylesheet" type="text/css">
     <link href="stylesheets/buttons.css" rel="stylesheet" type="text/css">
+    <link href="stylesheets/portfolio.css" rel="stylesheet" type="text/css">
     <link href="stylesheets/style.css" rel="stylesheet" type="text/css">
     <link href="stylesheets/font.css" rel="stylesheet" type="text/css">
     <link href="stylesheets/skillsanimation.css" rel="stylesheet" type="text/css">
@@ -27,6 +29,7 @@
     <![endif]-->
 </head>
 <body>
+<div class="loadhtml">
 <canvas id="canvas"></canvas>
 <!--<div id="spyNav" class="navigation">-->
 <nav id="nav_bar" class="navbar navbar-inverse navbar-static-top navbar-fixed-top" role="navigation">
@@ -77,7 +80,7 @@
                 </a>
             </div>
         </div>
-    </div>
+
 
 <section class=container">
 <div class="row" id="secend">
@@ -114,10 +117,44 @@
         </div>
 </div>
     </section>
-<section class="container">
+<section class="container-fluid">
     <div class="row" id="third">
+        <div class="col-md-12">
         <div class="colors">
         <h3>Projekty</h3>
+        </div>
+        <div class="wrapper">
+            <div class="project" id="c0"><a target="_blank" href="http://dolero.jfddl2.is-academy.pl/">
+                <div class="image" id="i0">
+                </div>
+                <div class="story" id="s0">
+                    <div class="info">
+                        <p>Projekt tworzony w zespole Dolero w ramach szkolenia</br>Junior Front-End Developer</p>
+                    </div>
+                </div>
+            </a></div>
+
+            <div class="project" id="c1"><a target="_blank" href="http://www.dolero.jfddl2.is-academy.pl/game.html">
+                <div class="image" id="i1">
+                </div>
+                <div class="story" id="s1">
+                    <div class="info">
+                        <p>Projekt tworzony w zespole Dolero w ramach szkolenia</br>Junior Front-End Developer</p>
+                    </div>
+                </div>
+            </a></div>
+
+            <div class="project" id="c2"><a target="_blank" href="http://app.dolero.jfddl2.is-academy.pl/">
+                <div class="image" id="i2">
+                </div>
+                <div class="story" id="s2">
+                    <div class="info">
+                        <p>Projekt tworzony w zespole Dolero w ramach szkolenia</br>Junior Front-End Developer</p>
+                    </div>
+                </div>
+            </a></div>
+
+        </div>
         </div>
     </div>
 </section>
@@ -133,6 +170,7 @@
 <script src="jquery-3.2.1.js"></script>
 <script src="javascript/lib/jquery.waypoints.min.js"></script>
 <!--<script src="javascript/lib/noframework.waypoints.js"></script>-->
+<script src="javascript/loading.js" type="text/javascript"></script>
 <script src="javascript/buttons.js" type="text/javascript"></script>
 <script src="javascript/backtothetop.js" type="text/javascript"></script>
 <script src="javascript/letterdrop.js" type="text/javascript"></script>
@@ -142,6 +180,6 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 
 <script src="js/bootstrap.min.js"></script>
-
+</div>
 </body>
 </html>
