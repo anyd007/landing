@@ -1,0 +1,273 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+
+
+.screen{
+    margin-left: 23%;
+    padding: 3.0em 0;
+    font-size: 0.625em;
+    width: 600px;
+    height: 600px;
+    perspective: 900px;
+}
+.seeme {
+    height: 600px;
+}
+
+.content{
+    opacity: 0.8;
+    width:100%;
+    height:100%;
+    font-size: 1.6em;
+
+    background-color: #de94f5;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#be29ec), to(#de94f5));
+    background-image: -webkit-linear-gradient(top, #be29ec, #de94f5);
+    background-image:    -moz-linear-gradient(top, #be29ec, #de94f5);
+    background-image:      -o-linear-gradient(top, #be29ec, #de94f5);
+    background-image:         linear-gradient(to bottom, #be29ec, #de94f5);
+
+    transition: .5s all ease;
+    transform: rotateX(60deg) scale(0.7);
+    perspective: 900px;
+    box-shadow: 0px 20px 50px #555;
+    animation: entry 1s linear 1;
+
+}
+
+.content h4{
+    opacity:0.8;
+    font-family: 'Rafale BG.otf', sans-serif;
+    text-transform: uppercase;
+    font-size:2em;
+    text-align: center;
+    padding: 0 0.469em;
+    line-height: 1.719em;
+    color: white;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.75);
+
+    background-color: #666666;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#A3A3A3), to(#666666));
+    background-image: -webkit-linear-gradient(top, #A3A3A3, #666666);
+    background-image:    -moz-linear-gradient(top, #A3A3A3, #666666);
+    background-image:      -o-linear-gradient(top, #A3A3A3, #666666);
+    background-image:         linear-gradient(to bottom, #A3A3A3, #666666);
+
+    box-shadow:
+            inset 0px 1px 0px 0px rgba(255,255,255,0.3),
+            0px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+form{
+    padding: 0.625em 0.938em;
+    text-align: center;
+}
+
+textarea, label, input, .forgot{
+    display:block;
+    width: 100%;
+    line-height: 2.188em;
+}
+
+textarea, input{
+    border-radius: 6px;
+    padding: 0.188em 0.938em;
+    margin-bottom: 1em;
+    border: 1px solid #21537c;
+}
+
+textarea, label, .forgot, input[type=submit]{
+    font-family: 'Rafale BG.otf', sans-serif;
+    font-size: 25px;
+    color: #666666;
+    letter-spacing: 0.063em;
+    /*text-shadow: 0 1px 1px rgba(0,0,0,0.75)*/
+}
+textarea {
+    resize: none;
+    height: 100px;
+}
+.forgot{
+    text-decoration: none;
+    margin-bottom: 1em;
+}
+
+input[type=email]:focus, textarea[type=message]:focus {
+    outline: none;
+    box-shadow: 0 0 5px #51CBEE;
+    border: 1px solid #51CBEE;
+}
+
+input[type=submit]{
+    margin-top: 3%;
+    font-size:1em;
+    font-family: 'Rafale BG.otf', sans-serif;
+    background-color: #666666;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#A3A3A3), to(#666666));
+    background-image: -webkit-linear-gradient(top, #A3A3A3, #666666);
+    background-image:    -moz-linear-gradient(top, #A3A3A3, #666666);
+    background-image:      -o-linear-gradient(top, #A3A3A3, #666666);
+    background-image:         linear-gradient(to bottom, #A3A3A3, #666666);
+
+    box-shadow:
+            inset 0px 1px 0px 0px rgba(255,255,255,0.3),
+            0px 1px 0px 0px rgba(0,0,0,0.1);
+}
+
+input[type=submit]:hover{
+
+    background-color: #4a9acc;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#4a9acc), to(#2e6e9c));
+    background-image: -webkit-linear-gradient(top, #4a9acc, #2e6e9c);
+    background-image:    -moz-linear-gradient(top, #4a9acc, #2e6e9c);
+    background-image:      -o-linear-gradient(top, #4a9acc, #2e6e9c);
+    background-image:         linear-gradient(to bottom, #4a9acc, #2e6e9c);
+
+}
+
+.extrusion{
+    position:relative;
+}
+
+.extrusion:before, .extrusion:after{
+    content:'';
+    position:absolute;
+}
+
+.extrusion:before{
+    top:0;
+    left:0;
+    height: 100%;
+    width: 0.625em;
+    background: #be29ec;
+    transform-origin: left center ;
+    transform: rotateY(90deg);
+}
+
+.extrusion:after{
+    right:0;
+    bottom:0;
+    height: 0.625em;
+    width: 100%;
+    background: #be29ec;
+    transform-origin: center bottom;
+    transform: rotateX(90deg);
+}
+
+h4, textarea, label, input, .forgot{
+    transform-style: preserve-3d;
+    transform:
+            translateX(0px)
+            translateY(0px)
+            translateZ(1000px);
+    animation: fall 0.8s ease-in-out;
+    animation-delay:0.05s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes fall {
+    to { transform:
+            translateX(0px)
+            translateY(0px)
+            translateZ(1px); }
+}
+
+h1{
+    animation-delay:0.20s;
+}
+
+label[for=email]{
+    animation-delay:0.35s;
+}
+
+input[type=email]{
+    animation-delay:0.50s;
+}
+
+label[for=message]{
+    animation-delay:0.65s;
+}
+
+textarea[type=message]{
+    animation-delay:0.80s;
+}
+
+.forgot{
+    animation-delay:0.95s;
+}
+
+input[type=submit]{
+    animation-delay:1.10s;
+}
+
+@keyframes rotate {
+    to { transform:
+            translateX(0px)
+            translateY(0px)
+            translateZ(0px)
+            rotateX(0deg)
+            rotateY(0deg)
+            rotateZ(0deg); }
+}
+.content{
+    animation: rotate 0.85s ease-in-out;
+    animation-delay: 2.00s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+/*social media*/
+.social-container {
+
+    text-align: center;
+    color: #000;
+}
+.social-icons {
+    padding: 0;
+    list-style: none;
+    margin-top: 5em;
+}
+.social-icons li {
+    display: inline-block;
+    /*margin: 0.15em;*/
+    position: relative;
+}
+.social-icons i {
+    color: #666666;
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    transition: all 265ms ease-out;
+}
+.social-icons a {
+    display: inline-block;
+}
+.social-icons a:before {
+    transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    content: " ";
+    width: 55px;
+    height: 55px;
+    border: 1px solid;
+    border-color: #666666;
+    border-radius: 100%;
+    display: block;
+    transition: all 265ms ease-out;
+}
+.social-icons a:hover:before {
+    transform: scale(0);
+    transition: all 265ms ease-in;
+}
+.social-icons a:hover i {
+    transform: scale(2);
+    -ms-transform: scale(2);
+    -webkit-transform: scale(2);
+    border-style: none;
+    transition: all 265ms ease-in;
+}
+/*social media end*/

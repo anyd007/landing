@@ -1,0 +1,11 @@
+@media screen and (max-width: 959px){
+    img {
+        width: 100%;
+    }
+    .moving-zone .popup .popup-content .popup-text a {
+        width: 90%;
+    }
+    canvas {
+        visibility: hidden;
+    }
+}
