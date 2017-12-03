@@ -6,7 +6,6 @@
     transform: rotateX(-90deg);
     animation: letterDrop 1.3s ease 1 normal forwards;
 }
-
 @keyframes letterDrop {
     10% {
         opacity: 0.5;
