@@ -5,11 +5,13 @@
 
 
 .screen{
-    margin-left: 23%;
-    padding: 3.0em 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.0em 0;
     font-size: 0.625em;
-    width: 600px;
-    height: 600px;
+    width: 700px;
+    height: 500px;
     perspective: 900px;
 }
 .seeme {
@@ -101,8 +103,12 @@ input[type=email]:focus, textarea[type=message]:focus {
 }
 
 input[type=submit]{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
     margin-top: 3%;
-    font-size:1em;
+    font-size:1.5em;
     font-family: 'Rafale BG.otf', sans-serif;
     background-color: #666666;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#A3A3A3), to(#666666));
@@ -229,7 +235,7 @@ input[type=submit]{
 .social-icons {
     padding: 0;
     list-style: none;
-    margin-top: 5em;
+    margin-top: 3em;
 }
 .social-icons li {
     display: inline-block;

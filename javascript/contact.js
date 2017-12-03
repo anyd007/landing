@@ -1,7 +1,7 @@
 $(document).ready(function () {
     const $contact = $('#fourth');
     $contact.waypoint(function () {
-        console.log('dupa');
+        console.log('zupa');
         const $only =  $('.seeme').append('<div class="news1 screen">\n' +
             '                          <div class="content extrusion">\n' +
             '                                  <h4>Napisz, napewno odpowiem</h4>\n' +
