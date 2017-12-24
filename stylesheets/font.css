@@ -1,12 +1,12 @@
 @font-face {
-    font-family: 'Reckoner.ttf';
-    src: url('../localFonts/Reckoner.ttf') format('truetype');
+    font-family: 'newone.ttf';
+    src: url('../localFonts/newone.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family:'Akula.woff';
-    src: url('../localFonts/Akula.woff') format('woff');
+    font-family:'newfont2';
+    src: url('../localFonts/newfont2.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -18,12 +18,6 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'INKFERNO.ttf';
-    src: url('../localFonts/INKFERNO.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
 
 @font-face {
     font-family: 'Azedo-Bold.otf';
@@ -44,11 +38,4 @@
     src: url('../localFonts/ElegantLux-Mager.otf') format('woff');
     font-weight: bold;
     font-style: normal;
-}
-@font-face {
-    font-family: 'Rafale BG.otf';
-    src: url('../localFonts/Rafale BG.otf') format('woff');
-    font-weight: bold;
-    font-style: normal;
-
 }

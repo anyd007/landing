@@ -24,5 +24,7 @@ $(document).ready(function() {
 
 
 // resize element end
+//     add portfoliot text
+
 });
 

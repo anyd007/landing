@@ -3,44 +3,85 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
+
 }
+
 .container {
     padding: 0 0 0 8%;
     width: 100%;
 }
 
 #first {
-    margin-top: 5%;
-    padding-bottom: 5%;
+    width: auto;
+    height: auto;
+    background-image: url("../images/laptop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*margin-top: 5%;*/
+    padding-bottom: 1%;
 }
+
 #secend {
-    margin-top: 21%;
-    padding-bottom: 5%;
+    margin-bottom: -17%;
+    -webkit-clip-path: polygon(0 0%, 100% 0, 100% 79%, 0% 100%);
+    clip-path: polygon(0 0%, 100% 0, 100% 79%, 0% 100%);
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-left: 0;
+    padding-bottom: 7%;
+    background-image: url("../images/skills.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    z-index: 0;
 }
 
 #third {
+    margin-top: -17%;
+    -webkit-clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+    position: relative;
+    width: auto;
+    height: auto;
+    background-image: url("../images/project.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     padding-bottom: 5%;
 }
+
 #fourth {
-   padding-bottom: 5%;
+    padding-bottom: 5%;
 }
 
-
 /*canvas {*/
-    /*position: fixed;*/
+/*position: fixed;*/
 /*}*/
 .skills {
     text-align: center;
 }
+
 #top {
-bottom : 200px;
-right : 20px;
-position : fixed;
-cursor : pointer;
-z-index : 10;
-display : none;
-background-color : #666666;
-padding :20px 40px;
-color : #ffffff;
+    border-radius: 20%;
+    font-family: 'newone.ttf', sans-serif;
+    bottom: 31%;
+    right: 2%;
+    position: fixed;
+    cursor: pointer;
+    z-index: 10;
+    display: none;
+    background-color: #f9cf00;
+    padding: 1.5vw 2.5vw;
+    color: #ffffff;
 }
+
+/*#stage {*/
+/*position: absolute;*/
+/*width: 100%;*/
+/*height: 100%;*/
+/*overflow: hidden;*/
+/*top: 0;*/
+/*left: 0;*/
+/*z-index: -5;*/
+/*}*/
 

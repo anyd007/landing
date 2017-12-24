@@ -1,0 +1,50 @@
+CACHE MANIFEST
+# 2017-12-17:v1
+CACHE:
+    images/68466531-mind-wallpapers.jpg
+    images/Ajax1.png
+    images/Bootstrap.png
+    images/css3.png
+    images/Custom-JSON.png
+    images/cv1.pdf
+    images/doleroapp.jpg
+    images/dolerogame.jpg
+    images/Git-Icon-1788C.png
+    images/HTML5_Logo_512.png
+    images/Javascript-shield.png
+    images/pexels-photo-min.jpg
+    images/project.jpg
+    images/react-logo.png
+    images/screenlanding.jpg
+    images/skills.jpg
+    images/smoking_20head.jpg
+    images/wall.jpg
+
+    stylesheets/buttons.css
+    stylesheets/contact.css
+    stylesheets/font.css
+    stylesheets/loading.css
+    stylesheets/nav.css
+    stylesheets/portfolio.css
+    stylesheets/respnsive.css
+    stylesheets/sectionfirst.css
+    stylesheets/skillsanimation.css
+    stylesheets/style.css
+
+    css/bootstrap.css
+    css/bootstrap-theme.css
+    css/font-awesome.css
+
+    javascript/backtothetop.js
+    javascript/buttons.js
+    javascript/contact.js
+    javascript/jq.js
+    javascript/letterdrop.js
+    javascript/loading.js
+    javascript/script.js
+    javascript/skillsanimation.js
+
+    js/bootstrap.js
+    js/jquery-3.2.1.js
+
+    localFonts/newone.ttf

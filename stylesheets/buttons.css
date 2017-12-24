@@ -42,7 +42,7 @@
     color: white;
     font-family: 'Rafale BG.otf', sans-serif;
     font-size: 1.5vw;
-    line-height: 30px;
+    line-height: 1.5vw;
     font-weight: 100;
     text-align: center;
     transform: translateZ(15px);
@@ -52,3 +52,9 @@
     font-weight: bold;
 }
 /*CV button end*/
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .popup {
+        visibility: hidden;
+    }
+}
