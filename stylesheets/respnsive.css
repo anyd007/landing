@@ -1,11 +1,208 @@
-@media screen and (max-width: 959px){
-    img {
+@media screen and (max-width: 768px) {
+    .myskills {
+        font-size: 16vw;
+        line-height: 1;
+        text-shadow: 0 0 10px black, 0 0 15px black;
+    }
+    /*first*/
+    .santa_hat {
+        display: none;
+    }
+    .letterDrop {
+        display: none;
+    }
+
+    .scroll-btn {
+        display: none;
+    }
+
+    #first {
+        position: relative;
+        width: auto;
+        height: auto;
+        background-image: url("../images/68466531-mind-wallpapers.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center 75%;
+    }
+    .mobile_about {
+        padding-top: 10%;
+        color: white;
+        bottom: 3%;
+        margin-left: -9%;
         width: 100%;
+        font-size: 14vw;
+        text-align: center;
+        font-family: 'newone.ttf', sans-serif;
+        display: block;
     }
-    .moving-zone .popup .popup-content .popup-text a {
-        width: 90%;
+    .mobile_about ul {
+        line-height: 1;
+        text-shadow: 0 0 10px black, 0 0 15px black;
+       padding-bottom: 5%;
+        list-style-type: none;
     }
-    canvas {
-        visibility: hidden;
+    .mobile_about h2 {
+        padding-bottom: 6%;
+        font-size: 0.8em;
+        margin-left: 13%;
+        text-shadow: 0 0 10px #f9cf00,
+        0 0 15px #f9cf00,
+        0 0 30px #f9cf00,
+        0 0 30px #f9cf00,
+        0 0 30px #f9cf00,
+        0 0 40px #f9cf00,
+        0 0 50px #f9cf00,
+        0 0 60px #f9cf00,
+        0 0 70px #f9cf00,
+        0 0 80px #f9cf00,
+        0 0 90px #f9cf00,
+        0 0 100px #FFF62C;
     }
+
+    .mobile_about h2 a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .mobilebreak {
+        z-index: 1;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .break {
+        height: 17vw;
+        margin-top: 0;
+    }
+
+    .phone {
+        display: none;
+    }
+
+    /*swcend*/
+    #secend {
+        z-index: 1;
+        background-image: url("../images/mobileskils.jpg");
+        background-size: cover;
+        background-position: 14%;
+        margin-bottom: 0;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .headposition {
+        display: none;
+    }
+
+    .frame-5 {
+        display: none;
+    }
+
+    .mobile-frame {
+        padding-top: 10%;
+        margin-left: -4%;
+        font-family: 'newone.ttf', sans-serif;
+        margin-top: -8%;
+        list-style-type: none;
+        width: 100%;
+        display: block;
+    }
+    .mobile-frame li {
+        font-size: 12vw;
+        text-align: center;
+        text-shadow: 0 0 10px #f9cf00, 0 0 15px #f9cf00;
+    }
+
+    #stage {
+        display: none;
+    }
+
+    .break2 {
+        display: none;
+    }
+
+    /*third*/
+    #third {
+        background-image: url("../images/mobileskils.jpg");
+        background-size: cover;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .wrapper {
+        margin-right: 0;
+        margin-left: 0;
+        width: auto;
+        height: auto;
+        perspective: none;
+    }
+
+    .project {
+        margin: 3%;
+        margin-left: 0;
+        -o-transform: none !important;
+        -moz-transform: none !important;
+        -ms-transform: none !important;
+        -webkit-transform: none !important;
+        transform: none !important;
+        position: static;
+        float: left;
+        top: 0%;
+        width: 100%;
+        height: 60vw;
+        box-shadow: 0px 20px 50px #555;
+    }
+
+    #c0 {
+        width: 100%;
+        height: 60vw;
+        position: static;
+        z-index: 0;
+    }
+
+    #i0,
+    #i1,
+    #i2 {
+        background-size: cover;
+    }
+
+    .story {
+        display: none;
+    }
+
+    .image {
+        height: 100%;
+    }
+    /*fourth*/
+    .clickme {
+        height: 75vw;
+    }
+
+    input {
+        height: 10vw;
+    }
+
+    input.name,
+    input.email {
+        font-size: 6vw;
+    }
+
+    textarea.message {
+        font-size: 3.5vw;
+    }
+
+    textarea {
+        height: 37vw;
+    }
+
+    .mobileform {
+        background-image: url("../images/laptop.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center 75%;
+    }
+.break3 {
+    height: 31vw;
+}
 }

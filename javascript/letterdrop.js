@@ -19,7 +19,7 @@
                     var dropDelays = '\n', addCSS;
 
                     for ( i = this.range.min; i <= this.range.max; i++ ) {
-                        dropDelays += '.ld' + i + ' { animation-delay: 0.4' + i + 's; }\n';
+                        dropDelays += '.ld' + i + ' { animation-delay: 2.5' + i + 's; }\n';
                     }
 
                     addCSS = $( '<style>' + dropDelays + '</style>' );

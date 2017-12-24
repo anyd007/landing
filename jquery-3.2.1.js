@@ -9430,7 +9430,7 @@ jQuery.ajaxSettings.xhr = function() {
 
 var xhrSuccessStatus = {
 
-		// File protocol always yields status code 0, assume 200
+		// File protocol always yields status code 0, assume weather_img
 		0: 200,
 
 		// Support: IE <=9 only
