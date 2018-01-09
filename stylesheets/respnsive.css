@@ -4,19 +4,18 @@
         line-height: 1;
         text-shadow: 0 0 10px black, 0 0 15px black;
     }
-    /*first*/
-    .santa_hat {
-        display: none;
+    #top {
+        font-size: 5vw;
     }
+    /*first*/
     .letterDrop {
         display: none;
-    }
-
-    .scroll-btn {
+    }  .scroll-btn {
         display: none;
     }
 
     #first {
+        margin-top: -32%;
         position: relative;
         width: auto;
         height: auto;
