@@ -1,5 +1,5 @@
 # landing
 I will try to create new landing page
 
-firebase adress:
+firebase address:
 landing-andrzej.firebaseapp.com
